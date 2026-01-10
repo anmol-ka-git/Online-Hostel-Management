@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <style>
+         
+         nav {
+    display: flex;
+    justify-content: space-between; /* Spread logo, links, and button evenly */
+    align-items: center; /* Center items vertically */
+    padding: 15px 50px; /* Adjust padding */
+    background-color: white;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Add space between logo and "Home" */
+}
+
+.logo img {
+    max-height: 80px; /* Adjusted for a balanced size */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adds equal spacing between links */
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:times new roman;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.cta {
+    background-color: rgb(145, 116, 63);
+    color: white;
+    padding: 9px 15px; /* Reduced padding for a smaller button */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px; /* Made text size smaller */
+    font-weight: bold;
+}
+        
+        body {
+            font-family: calibri;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f5;
+        }
+        .location {
+            text-align: center;
+            padding: 50px 20px;
+            background-color:#f0f0f5;
+        }
+        .location h2 {
+            font-size:2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-family:sans-serif;
+        }
+        .location p {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-family:calibri;
+        }
+        .location-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        .location-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .location-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .location-item img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .location-item img:hover {
+            transform: scale(1.05);
+        }
+        .location-item-content {
+            max-width: 400px;
+        }
+        .location-item-content h3 {
+            font-size: 22px;
+            color: #444;
+            margin: 0 0 10px;
+        }
+        .location-item-content p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.4;
+            font-family:times new roman;
+        }
+        .map-container {
+            margin-bottom: 50px;
+        }
+        iframe {
+            border: 0;
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Responsive for Mobile */
+        @media (max-width: 768px) {
+            .location-item {
+                flex-direction: column;
+                align-items: center;
+            }
+            .location-item img {
+                width: 100%;
+            }
+        }
+        /* Footer */
+        footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-extra h3 {
+  margin-bottom: 10px;
+}
+
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-extra ul li {
+  margin: 5px 0;
+}
+
+.footer-extra ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-extra ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo1.jpg" alt="Logo">
+        </div>
+        
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="OurHostels.html">Our Hostels</a>
+            <a href="Location.html">Location</a>
+            <a href="login.html">Login</a>
+        </div>
+    
+        <a href="tel:7555342289" class="cta">Call: 7555342289</a>
+    </nav>
+    
+    <!-- Location Section -->
+    <section class="location">
+        <div class="map-container">
+            <h2>LOCATION</h2>
+        <p>The Rest Nest, located near Town Square,Viman Nagar, Pune, offers a comfortable and student-friendly environment with modern amenities. 
+            <br>It provides a peaceful space for focused study and relaxation, ensuring an enriching hostel experience.</p>
+        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1320485236847!2d73.90468137519291!3d18.568084582534645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c14daf8c6301%3A0xfdcf10c69821c3a0!2sTownsquare%20by%20Naiknavare%20Developers!5e0!3m2!1sen!2sin!4v1738561671017!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2>How to Get Here</h2>
+        <p>The Rest Nest is conveniently located near major transit hubs, making it easy to reach. Enjoy modern amenities and a peaceful environment in the heart of the city.</p>
+        <div class="location-container">
+            <div class="location-item">
+                <img src="images/metro.jpg" alt="Travel by Metro">
+                <div class="location-item-content">
+                    <h3>By Metro</h3>
+                    <p>Metro line: AQUA is used.</p>
+                    </div>
+            </div>
+            <div class="location-item">
+                <img src="images/cab.jpg" alt="Travel by Cab">
+                <div class="location-item-content">
+                    <h3>By Cab</h3>
+                    <p>Conveniently accessible by taxi from any part of the city, providing a hassle-free way to reach us.</p>
+                </div>
+            </div>
+            <div class="location-item">
+                <img src="images/bus.jpg" alt="Travel by Bus">
+                <div class="location-item-content">
+                    <h3>By Bus</h3>
+                    <p>Bus lines: 149, 235, 336, 98, 166.
+                        Nearest bus stop: A 3-minute walk away from Town Square</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="images/logo1.jpg" alt="Logo">
+            <h2>The Rest Nest</h2>
+          </div>
+      
+          <div class="footer-info">
+            <p>TownSquare by Naiknavare, VimanNagar, Pune</p>
+            <p>📍 <a href="https://maps.app.goo.gl/ukq6ZDucrMfFj1gm9" target="_blank">View Location on Map</a></p>
+            <p>📞 Phone: <a href="tel:+91 7555342289">+91-7555342289</a></p>
+            <p>📧 Email: <a href="#">info@therestnest.in</a></p>
+          </div>
+      
+          <div class="footer-extra">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="OurHostels.html">Our Hostels</a></li>
+              <li><a href="location.html">Location</a></li>
+            <li><a href="login.html">Log In</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <p class="footer-bottom">© 2024 by The Rest Nest. Powered and secured by The Rest Nest.</p>
+      </footer>
+
+</body>
+</html>

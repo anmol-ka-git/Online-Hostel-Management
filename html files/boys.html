@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Phoneix Wing | The Rest Nest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: Calibri;
+    line-height: 1.6;
+    font-weight: 300; 
+    font-size: 18px;  /* Change this to adjust text size */
+}
+
+        /* Nav */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: white;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        .logo img {
+            max-height: 80px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            font-family:times new roman
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .cta {
+            background-color: rgb(145, 116, 63);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .carousel-inner img {
+    width: 100%;  /* Ensures full width */
+    height: 520px; /* Adjust this value based on your design preference */
+    object-fit: cover; /* Crops and fills the image to maintain aspect ratio */
+}
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+h1{
+    color:#E65100
+}
+        h2 {
+            color: #E65100;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            line-height: 200%;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background: black;
+            color: white;
+        }
+
+        button {
+            background: #FF6F00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            display: block;
+        }
+
+        button:hover {
+            background: #E65100;
+        }
+
+        /* --- Updated Layout for Pricing & Contact Form --- */
+        .pricing-contact-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            font-size: large;
+        }
+
+        .pricing, .contact-form {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .pricing-contact-container {
+                flex-direction: column;
+            }
+        }
+        .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Adjust spacing between sections */
+}
+
+.contact-form, .location {
+    width: 48%; /* Adjust width as needed */
+}
+/* Footer */
+footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-extra h3 {
+  margin-bottom: 10px;
+}
+
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-extra ul li {
+  margin: 5px 0;
+}
+
+.footer-extra ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-extra ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  font-size: 14px;
+}
+    </style>
+</head>
+<body>
+<!-- Bootstrap JS Bundle (includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo1.jpg" alt="Logo">
+        </div>
+        
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="OurHostels.html">Our Hostels</a>
+            <a href="Location.html">Location</a>
+            <a href="login.html">Login</a>
+        </div>
+    
+        <a href="tel:7555342289" class="cta">Call: 7555342289</a>
+    </nav>
+
+    <section class="hostel-details">
+        <h1>The Phoenix Wing</h1>
+        <p>TownSquare by Naiknavare, Viman Nagar, Pune, Maharashtra, India.</p>
+            
+        <div class="gallery">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/singlebed.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/doublebed.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/2bhk.jpg" alt="Third slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/mess.jpg" alt="Fourth slide">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <p><h2>Property Description</h2>
+                Located in Viman Nagar, is a Co-ed hostel with separate building for girls and boys.The Phoneix Wing, boys building, provides a comfortable stay for the male students. Rooms are well-furnished, some with balconies, and come with shared washrooms maintained to high hygiene standards,Students receive fresh bed linen and a nutritious buffet breakfast daily. 
+                Conveniently located, the Pune International Airport is just 1.5 miles away, with shopping and cultural spots nearby.              
+</p>
+        
+              </section>
+    
+    <section class="property-details">
+        <h2>Property Details</h2>
+        <p>Bedrooms: 16 | Wi-Fi: Available | Kitchen+Mess: Available | Laundry: Available | Security: Available</p>
+    </section>
+
+    <div class="pricing-contact-container">
+       
+        <!-- Monthly Booking Prices (Moved below) -->
+        <section class="pricing">
+            <h2>Monthly Booking Prices</h2>
+            <table>
+                <tr><th>Room Type</th><th>Price</th>
+                <tr><td>Single Bed Room</td><td>₹12000</td></tr>
+                <tr><td>Twin Bed Room</td><td>₹8000</td></tr>
+                <tr><td>Full 2BHK Flat</td><td>₹20000</td></tr>
+                </table>
+            <button><a href="login.html">Book Now</a></button>
+        </section>
+    </div>
+            </section>
+    
+
+        
+<div class="container">
+    <!-- Contact Us Form -->
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Property Location -->
+    <section class="location">
+        <h2>Property Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.1320485236847!2d73.90468137519291!3d18.568084582534645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c14daf8c6301%3A0xfdcf10c69821c3a0!2sTownsquare%20by%20Naiknavare%20Developers!5e0!3m2!1sen!2sin!4v1738561671017!5m2!1sen!2sin" 
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo1.jpg" alt="Logo">
+        <h2 style="color:white">The Rest Nest</h2>
+      </div>
+  
+      <div class="footer-info">
+        <p>TownSquare by Naiknavare, VimanNagar, Pune</p>
+        <p>📍 <a href="https://maps.app.goo.gl/ukq6ZDucrMfFj1gm9" target="_blank">View Location on Map</a></p>
+        <p>📞 Phone: <a href="tel:+91 7555342289">+91-7555342289</a></p>
+        <p>📧 Email: <a href="#">info@therestnest.in</a></p>
+      </div>
+  
+      <div class="footer-extra">
+        <h3>Quick Links</h3>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="OurHostels.html">Our Hostels</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="login.html">Log In</a></li>
+          </ul>
+      </div>
+    </div>
+  
+    <p class="footer-bottom">© 2024 by The Rest Nest. Powered and secured by The Rest Nest.</p>
+  </footer>
+
+
+</body>
+</html>

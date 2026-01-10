@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <style>
+
+        body{
+            font-family: calibri;
+            text-align: center;
+            background-color: #f0f0f5;
+            margin: 0;
+            padding: 0;
+            font-size:16px;
+        }
+        header {
+            display: flex;
+            font-size:25px;
+            align-items: center;
+            justify-content: center;
+            background-color:white;
+            padding: 2px;
+            color: black;
+        }
+        header img {
+            height: 50px;
+            margin-right: 15px;
+        }
+        nav {
+            text-align: center;
+            background-color: white;
+            color: black;
+            padding: 10px 0;
+        }
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight:bold;
+            font-family: times new roman;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+/* Hero Section */
+.hero {
+            position: relative;
+            text-align: center;
+            color: #f0f0f5;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            filter:brightness(50%);
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero button {
+            background-color: rgb(192, 141, 87);
+            color: black;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            font-weight: lighter;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .hero button:hover {
+            background-color: rgb(113, 93, 55);
+        }
+
+/* Rooms Section */
+.rooms {
+    text-align: center; /* Centers the section title */
+    padding: 30px;
+    background: #f9f9f9;
+}
+
+.rooms h2 {
+    text-align: center; /* Centers the "Our Rooms" heading */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Rooms */
+.rooms-container {
+    display: flex; /* Use flexbox for side-by-side layout */
+    justify-content: center; /* Centers the content */
+    gap: 20px; /* Space between the rooms */
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.room {
+    background: #f0f0f5;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Set fixed width for proper alignment */
+    text-align: center;
+}
+
+.room img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.room h3 {
+    margin: 10px 0;
+}
+
+.room button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.room button:hover {
+    background-color: #003d99;
+}
+
+        /* Facilities Section */
+        .facilities {
+            padding: 30px;
+            background: #f0f0f5;
+            text-align: center;
+        }
+        .facilities h2 {
+            margin-bottom: 20px;
+        }
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .facility {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .facility img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: 0.3s ease-in-out;
+        }
+        .facility-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.3s ease-in-out;
+        }
+        .facility:hover img {
+            filter: brightness(0.5);
+        }
+        .facility:hover .facility-text {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-extra h3 {
+  margin-bottom: 10px;
+}
+
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-extra ul li {
+  margin: 5px 0;
+}
+
+.footer-extra ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-extra ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  font-size: 14px;
+}
+       
+        .social-media a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+
+            /*image fade in &out*/
+          
+        .container {
+            padding: 20px;
+        }
+
+        .fade-text {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            height: 400px; /* Fixed height to prevent jumping */
+            overflow: hidden;
+        }
+
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 1.5s ease-in-out, opacity 1.5s ease-in-out;
+        }
+
+        .image2 {
+            bottom: -25%; /* Initially placed below */
+            transform: translateY(100%); /* Start hidden */
+            opacity: 0; /* Hidden initially */
+        }
+
+        .slide-up {
+            transform: translateY(25%); /* Move up covering 1/4th of image1 */
+            opacity: 1; /* Fade in smoothly */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const image2 = document.querySelector(".image2");
+
+            function slideImage() {
+                image2.classList.toggle("slide-up");
+            }
+
+            slideImage(); // Start the animation
+            setInterval(slideImage, 3000); // Repeat every 3 seconds
+        });
+    </script>
+
+        
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header>
+        <img src="images/logo1.jpg" alt="Logo">
+        <h1>The Rest Nest</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="OurHostels.html">Our Hostels</a>
+        <a href="Location.html">Location</a>
+        <a href="login.html">Login</a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/background2.jpg" alt="Hostel Banner" class="hero-image">
+        <div class="hero-content">
+            <h1><b>Welcome to Our Hostel</h1>
+            <p><b>Comfortable and affordable living for all</b></p>
+            <a href="OurHostels.html"><button>Explore Now</button></a>
+        </div>
+    </section>
+   
+   <!-- Rooms Section -->
+<section class="rooms">
+    <h2>Check it Out</h2>
+    <div class="rooms-container">
+        <div class="room">
+            <img src="images/reception.jpeg" alt="Reception">
+            <h3>Reception Area</h3>
+            <p>Warm and welcoming reception to assist you.</p>
+             </div>
+        <div class="room">
+            <img src="images/garden.jpeg" alt="Chill Area">
+            <h3>Chill Area</h3>
+            <p>Perfect place to relax and socialize.</p>
+        </div>
+    </div>
+    <div class="rooms-container">
+        <div class="room">
+            <img src="images/sports.jpg" alt="Sports">
+            <h3>Sports Ground</h3>
+            <p>A large sports ground to indulge in extra curricular activities.</p>
+             </div>
+        <div class="room">
+            <img src="images/park.jpg" alt="Parking">
+            <h3>Vehical Parking</h3>
+            <p>A fully sunroofed area to park all your vehicles.</p>
+        </div>
+    </div>
+</section>
+
+
+   
+    <!-- Facilities Section -->
+    <section class="facilities">
+        <h2>Our Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility">
+                <img src="images/wifi.png" alt="WiFi">
+                <div class="facility-text">
+                    <h3>Free Wi-Fi</h3>
+                    <p>Stay connected with high-speed internet.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/studyroom.jpg" alt="Study Area">
+                <div class="facility-text">
+                    <h3>Study Area</h3>
+                    <p>Quiet space for students to focus.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/kitchen.jpg" alt="Kitchen">
+                <div class="facility-text">
+                    <h3>Fully Equiped Mess</h3>
+                    <p>Healthy food provided from our modern kitchen.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/gym.jpg" alt="Gym">
+                <div class="facility-text">
+                    <h3>Gym Space</h3>
+                    <p>Stay fit with our well-equipped gym.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/medical.jpg" alt="Medical">
+                <div class="facility-text">
+                    <h3>Medical Area</h3>
+                    <p>Dedicated space for health checkups.</p>
+                </div>
+            </div>
+            <div class="facility">
+                <img src="images/laundry.jpg" alt="Laundry">
+                <div class="facility-text">
+                    <h3>Laundry Service</h3>
+                    <p>Convenient washing facilities available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-logo">
+            <img src="images/logo1.jpg" alt="Logo">
+            <h2>The Rest Nest</h2>
+          </div>
+      
+          <div class="footer-info">
+            <p>TownSquare by Naiknavare, VimanNagar, Pune</p>
+            <p>📍 <a href="https://maps.app.goo.gl/ukq6ZDucrMfFj1gm9" target="_blank">View Location on Map</a></p>
+            <p>📞 Phone: <a href="tel:+91 7555342289">+91-7555342289</a></p>
+            <p>📧 Email: <a href="#">info@therestnest.in</a></p>
+          </div>
+      
+          <div class="footer-extra">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="home.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="OurHostels.html">Our Hostels</a></li>
+              <li><a href="location.html">Location</a></li>
+            <li><a href="login.html">Log In</a></li>
+                    </ul>
+          </div>
+        </div>
+      
+        <p class="footer-bottom">© 2024 by The Rest Nest. Powered and secured by The Rest Nest.</p>
+      </footer>
+
+</body>
+</html>

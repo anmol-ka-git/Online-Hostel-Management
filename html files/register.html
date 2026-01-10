@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Online Hostel Management System</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 0 10px;
+      background: url("register-bg.jpg"), rgb(170, 169, 169);
+      background-position: center;
+      background-size: cover;
+    }
+
+    .wrapper {
+      width: 400px;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .input-field {
+      position: relative;
+      border-bottom: 2px solid #ccc;
+      margin: 15px 0;
+    }
+
+    .input-field label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.15s ease;
+    }
+
+    .input-field input {
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .input-field input:focus ~ label,
+    .input-field input:valid ~ label {
+      font-size: 0.8rem;
+      top: 10px;
+      transform: translateY(-120%);
+    }
+
+    button {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 16px;
+      border: 2px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      color: #fff;
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      color: #fff;
+    }
+
+    .login-link a {
+      color: #efefef;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <form action="register.php" method="POST">
+      <h2>Register</h2>
+      
+      <div class="input-field">
+        <input type="text" name="Name" required>
+        <label>Enter your name</label>
+      </div>
+      
+      <div class="input-field">
+        <input type="text" name="Surname" required>
+        <label>Enter your Surname</label>
+      </div>
+      
+      <div class="input-field">
+        <input type="email" name="email" required>
+        <label>Enter your email</label>
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="password" required>
+        <label>Create a password</label>
+      </div>
+
+      <div class="input-field">
+        <input type="password" name="confirm_password" required>
+        <label>Confirm your password</label>
+      </div>
+<!--Added Gender Selection -->
+<div class="input-field">
+  <select name="gender" required>
+    <option value="" disabled selected>Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+</div>
+      <button type="submit">Register</button>
+      
+      <div class="login-link">
+        <p>Already have an account? <a href="login.html">Log in</a></p>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

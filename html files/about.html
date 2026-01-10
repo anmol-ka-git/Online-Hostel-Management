@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: calibri;
+      line-height: 1.6;
+      background-color: #f0f0f5;
+      font-size:16px;
+    }
+
+    /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation Bar */
+header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 80px;
+            background-color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f1f1;
+            z-index: 1000;
+        }
+
+        .logo img {
+            max-height: 60px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size:18px;
+            font-family:times new roman;
+        }
+        nav ul li a:hover
+        {
+            text-decoration:underline;
+        }
+
+        .cta {
+            background-color:rgb(145, 116, 63);
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+    
+
+    /* Footer */
+    footer {
+  background: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+.footer-info a {
+  color: orange;
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
+
+.footer-extra h3 {
+  margin-bottom: 10px;
+}
+
+.footer-extra ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-extra ul li {
+  margin: 5px 0;
+}
+
+.footer-extra ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-extra ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  border-top: 1px solid white;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+    .cta {
+      background-color: rgb(145, 116, 63);
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .hero-section {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family:sans-serif;
+    }
+
+    .hero-section p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #666;
+      font-family:Calibri;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-height: 700px;
+      object-fit: cover;
+    }
+
+    .testimonials {
+      background-color: #f9f9f9;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-family:calibri;
+      font-size:18px;
+    }
+
+    .testimonials h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-quote {
+      max-width: 700px;
+      margin: 1rem auto;
+      font-style: italic;
+      color: #555;
+    }
+
+    .testimonial-author {
+      color: orange;
+      margin-top: 0.5rem;
+      font-size:20px;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navigation Bar -->
+<header>
+  <div class="logo">
+      <img src="images/logo1.jpg" alt="Logo">
+  </div>
+  <nav>
+      <ul>
+      <li><a href="home.html" onclick="loadContent('home.html')">Home</a></li>
+          <li><a href="about.html" onclick="loadContent('about.html')">About Us</a></li>
+          <li><a href="OurHostels.html" onclick="loadContent('OurHostels.html')">Our Hostels</a></li>
+          <li><a href="Location.html" onclick="loadContent('Location.html')">Location</a></li>
+          <li><a href="login.html">Log in</a></li>
+      </ul>
+  </nav>
+  <a href="tel:7555342289" class="cta">Call: 7555342289</a>
+</header>
+
+  <section class="hero-section">
+    <br><br><br>
+    <h1>About The Rest Nest</h1>
+    <p>Welcome to The Rest Nest, your home away from home! Nestled in the heart of Pune, we are more than just a place to stay — we are a vibrant community for students and professionals seeking comfort, connection, and adventure.
+
+      Our mission is to provide a warm, friendly, and affordable living space where students can relax, meet new people, and create lasting memories. Whether you're here for a short stay or an extended visit, we offer cozy accommodations designed with your comfort in mind.</p>
+  </section>
+
+  <section class="image-section">
+    <img src="images/abou4.jpg" alt="Room Image">
+  </section>
+
+  <section class="testimonials">
+    <h2>View of our Critics</h2>
+    <p class="testimonial-quote">"As a student, finding a safe and affordable space in Pune was tough until I discovered The Rest Nest. It has a warm community vibe, and I've made lifelong friends here."</p>
+    <p class="testimonial-author">Naqiya, Student</p><br><br>
+    <p class="testimonial-quote">"The Rest Nest is truely a home away from home, it has the best facilities as hostel point of view and feels more like a hotel."</p>
+    <p class="testimonial-author">Suraj, Student</p><br><br>
+    <p class="testimonial-quote">"This Hostel has given me an opportunity to study in a city away from home because of its excellent security services and the best staff"</p>
+    <p class="testimonial-author">Pallavi, Student</p><br><br>
+
+  </section>
+
+  <section class="testimonials">
+    <h2>About our Founders</h2>
+    <p class="testimonial-quote">"The founders of The Rest Nest are a group of passionate travelers and entrepreneurs who envisioned creating a home away from home for backpackers, students, and adventurers from all walks of life. With diverse backgrounds in hospitality, tourism, and business management, they combined their expertise to design a hostel that prioritizes comfort, affordability, and vibrant community living. Inspired by their own travel experiences, they sought to build a space where guests can not only find a cozy place to stay but also forge meaningful connections, share stories, and enjoy local culture."</p>
+    <p class="testimonial-author">The Founders</p><br><br>
+
+  </section>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="images/logo1.jpg" alt="Logo">
+        <h2>The Rest Nest</h2>
+      </div>
+  
+      <div class="footer-info">
+        <p>TownSquare by Naiknavare, VimanNagar, Pune</p>
+        <p>📍 <a href="https://maps.app.goo.gl/ukq6ZDucrMfFj1gm9" target="_blank">View Location on Map</a></p>
+        <p>📞 Phone: <a href="tel:+91 7555342289">+91-7555342289</a></p>
+        <p>📧 Email: <a href="#">info@therestnest.in</a></p>
+      </div>
+  
+      <div class="footer-extra">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="OurHostels.html">Our Hostels</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="login.html">Log In</a></li>
+
+        </ul>
+      </div>
+    </div>
+  
+    <p class="footer-bottom">© 2024 by The Rest Nest. Powered and secured by The Rest Nest.</p>
+  </footer>
+
+
+</body>
+</html>
